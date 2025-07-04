@@ -1,0 +1,9 @@
+export enum ConfigVariablesEnum {
+  OPENAI_API_KEY = "OPENAI_API_KEY",
+
+  MONGODB_URI = "MONGODB_URI",
+  MONGODB_NAME = "MONGODB_NAME",
+
+  QDRANT_URL = "QDRANT_URL",
+  QDRANT_API_KEY = "QDRANT_API_KEY",
+}
