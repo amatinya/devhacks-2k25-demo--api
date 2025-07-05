@@ -5,6 +5,7 @@ import { MongooseModule } from "@nestjs/mongoose";
 import { ConfigVariablesEnum } from "@/common/enums";
 import { TemplatesModule } from "@/core/templates/templates.module";
 import { QdrantModule } from "@/integrations/qdrant/qdrant.module";
+import { DocumentsModule } from "@/core/documents/documents.module";
 
 // TODO: Errors handling
 
@@ -21,6 +22,7 @@ import { QdrantModule } from "@/integrations/qdrant/qdrant.module";
     }),
     QdrantModule.forRoot(),
     TemplatesModule,
+    DocumentsModule,
   ],
 })
 export class AppModule {}

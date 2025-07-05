@@ -16,8 +16,10 @@ export class QdrantModule {
         provide: QdrantClient,
         useFactory: (configService: ConfigService) => {
           return new QdrantClient({
-            url: configService.get(ConfigVariablesEnum.QDRANT_URL),
-            apiKey: configService.get(ConfigVariablesEnum.QDRANT_API_KEY),
+            // url
+            // apiKey
+            host: configService.get(ConfigVariablesEnum.QDRANT_HOST),
+            port: +configService.get(ConfigVariablesEnum.QDRANT_PORT),
           });
         },
         inject: [ConfigService],
@@ -33,7 +35,7 @@ export class QdrantModule {
     };
   }
 
-  static forFeature({ collection }: { collection: string }): DynamicModule {
+  static forFeature({ collection }: { collection: "templates" | "documents" }): DynamicModule {
     const collectionProvider = {
       provide: `QDRANT_COLLECTION_${collection.toUpperCase()}`,
       useFactory: async (qdrantClient: QdrantClient, openAiService: OpenAiService) => {

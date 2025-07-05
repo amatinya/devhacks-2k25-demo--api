@@ -1,0 +1,9 @@
+DONE: Templates
+DONE: Open Ai
+DONE: Google Drive
+DONE: Databases (Mongo, Qdrant)
+DONE: Documents module
+
+TODO: Chatting (Tools)
+TODO: Mailing service
+TODO: Documents e-signing
