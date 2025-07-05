@@ -1,0 +1,87 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Notification</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        line-height: 1.2;
+        font-size: 14px;
+        color: #333333;
+        margin: 0;
+        padding: 0;
+        background-image:
+          radial-gradient(37.44% 109.75% at 82.64% 95.34%, #0acf8314, #0acf8300),
+          radial-gradient(40.33% 118.22% at 63.8% 105.93%, #1abcfe1f, #1abcfe00),
+          radial-gradient(39.75% 116.53% at 38.2% 108.9%, #a259ff33, #a259ff00),
+          radial-gradient(41.2% 120.76% at 15.5% 100%, #f24e1e1f, #f24e1e00);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .email-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 24px;
+        background-color: rgba(255, 255, 255, 0.75);
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      }
+      .header {
+        padding-bottom: 16px;
+        border-bottom: 1px solid #eaeaea;
+        margin-bottom: 24px;
+      }
+      .logo {
+        max-width: 150px;
+        display: block;
+        margin: 0 auto;
+      }
+      .content {
+        padding: 16px 0;
+      }
+      .footer {
+        margin-top: 24px;
+        padding-top: 16px;
+        border-top: 1px solid #eaeaea;
+        font-size: 12px;
+        color: #777777;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <div class="header">
+        <img
+          src="https://res.cloudinary.com/dpstcm9jb/image/upload/v1750518546/Frame_1_ort7xu.png"
+          alt="Docbyte logo"
+          class="logo"
+          width="48"
+          height="48"
+        />
+      </div>
+      <div class="content">
+        <p>Dear Recipient,</p>
+        <p>{{message}}</p>
+        <p>
+          Should you have any questions or require further assistance, please don't hesitate to reach out.
+        </p>
+        <p>Best regards,</p>
+        <p><strong>«Docbyte AI» System</strong></p>
+      </div>
+      <div class="footer">
+        <p>© Devhacks 2K25</p>
+        <p>12 Shinararneri street, Vanadzor</p>
+        <p>
+          <a href="https://docbyte.vercel.app/" style="color: #2563eb; text-decoration: none;">Website</a>
+          |
+          <a
+            href="https://cards.wavex.am/en/66d1cc31f52e91cc659296b3"
+            style="color: #2563eb; text-decoration: none;"
+          >Contact Us</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

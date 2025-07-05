@@ -26,7 +26,7 @@ export class DocumentsService {
     name,
   }: {
     template: TemplateDocument;
-    variables: Array<Record<string, string>>;
+    variables: Record<string, string>;
     name: string;
   }) {
     const zip = new PizZip(await this.googleDriveService.getFileBuffer({ file: template.webContentId }));

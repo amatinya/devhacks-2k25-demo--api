@@ -16,10 +16,8 @@ export class QdrantModule {
         provide: QdrantClient,
         useFactory: (configService: ConfigService) => {
           return new QdrantClient({
-            // url
-            // apiKey
-            host: configService.get(ConfigVariablesEnum.QDRANT_HOST),
-            port: +configService.get(ConfigVariablesEnum.QDRANT_PORT),
+            url: configService.get(ConfigVariablesEnum.QDRANT_URL),
+            apiKey: configService.get(ConfigVariablesEnum.QDRANT_API_KEY),
           });
         },
         inject: [ConfigService],

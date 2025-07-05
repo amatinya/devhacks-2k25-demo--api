@@ -19,9 +19,7 @@ export class OpenAiService implements OnModuleInit {
   }
 
   async onModuleInit() {
-    this.TextEmbeddingPreparationSystemPrompt = await loadSystemPrompt({
-      name: "text-embedding-preparation",
-    });
+    this.TextEmbeddingPreparationSystemPrompt = await loadSystemPrompt({ name: "text-embedding-preparation" });
   }
 
   /* ~ Private ~ */
@@ -52,7 +50,7 @@ export class OpenAiService implements OnModuleInit {
     return embedding;
   }
 
-  createChat({ temperature = 1, ...params }: Omit<ChatCompletionCreateParamsNonStreaming, "model">) {
-    return this.openAi.chat.completions.create({ model: "gpt-4o", temperature, ...params });
+  async createChat({ temperature = 1, ...params }: Omit<ChatCompletionCreateParamsNonStreaming, "model">) {
+    return this.openAi.chat.completions.create({ model: "gpt-4.1-2025-04-14", temperature, ...params });
   }
 }

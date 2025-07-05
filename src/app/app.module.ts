@@ -6,8 +6,7 @@ import { ConfigVariablesEnum } from "@/common/enums";
 import { TemplatesModule } from "@/core/templates/templates.module";
 import { QdrantModule } from "@/integrations/qdrant/qdrant.module";
 import { DocumentsModule } from "@/core/documents/documents.module";
-
-// TODO: Errors handling
+import { ChatsModule } from "@/core/chats/chats.module";
 
 @Module({
   imports: [
@@ -23,6 +22,7 @@ import { DocumentsModule } from "@/core/documents/documents.module";
     QdrantModule.forRoot(),
     TemplatesModule,
     DocumentsModule,
+    ChatsModule,
   ],
 })
 export class AppModule {}

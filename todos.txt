@@ -3,7 +3,7 @@ DONE: Open Ai
 DONE: Google Drive
 DONE: Databases (Mongo, Qdrant)
 DONE: Documents module
+DONE: Chatting (Tools)
+DONE: Mailing service
 
-TODO: Chatting (Tools)
-TODO: Mailing service
 TODO: Documents e-signing
