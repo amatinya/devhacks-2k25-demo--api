@@ -79,7 +79,7 @@ export class DocumentsService {
   }
 
   async search({ prompt }: { prompt: string }) {
-    const points = await this.qdrantCollection.searchPoints({ prompt, limit: 5 });
+    const points = await this.qdrantCollection.searchPoints({ prompt, limit: 7 });
     return this.documentModel.find({ _id: { $in: points.map((point) => point.payload!._id) } });
   }
 

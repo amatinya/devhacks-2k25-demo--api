@@ -30,7 +30,6 @@ Used to display existing, generated documents.
   "name": "string",
   "size": "number",
   "webContentLink": "string",
-  "webViewLink": "string",
   "createdAt": "string",
   "updatedAt": "string"
 }
@@ -47,7 +46,6 @@ Used to show an available template and ask for missing information.
   "name": "string",
   "size": "number",
   "webContentLink": "string",
-  "webViewLink": "string",
   "variables": ["string"],
   "createdAt": "string",
   "updatedAt": "string"
